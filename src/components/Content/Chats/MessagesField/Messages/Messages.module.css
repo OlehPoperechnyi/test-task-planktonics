@@ -1,0 +1,6 @@
+.wrapper {
+    max-height: 60vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+

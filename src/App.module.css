@@ -1,0 +1,19 @@
+.AppWrapper {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+      "header header header"
+      "content content content";
+  grid-template-rows: 65px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: dodgerblue;
+}
+.AppWrapper_header {
+  grid-area: header;
+
+}
+.AppWrapper_content {
+  grid-area: content;
+}
+

@@ -1,0 +1,19 @@
+.wrapper {
+    display: grid;
+    grid-template-rows: 1fr 200px;
+    height: 100%;
+    background-color: dodgerblue;
+}
+
+.wrapper_messages {
+    padding: 10px;
+}
+
+.wrapper_newMessage {
+    padding: 10px;
+    align-self: end;
+}
+#messages::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+}

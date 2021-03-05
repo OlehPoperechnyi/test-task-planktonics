@@ -1,0 +1,18 @@
+.wrapper {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.wrapper_loginForm {
+    padding: 20px;
+    text-decoration: black;
+}
+.wrapper_loginForm_formName {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}

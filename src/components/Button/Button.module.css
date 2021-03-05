@@ -1,0 +1,12 @@
+.button {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 30px;
+    width: 60px;
+    border: none;
+    outline: none;
+    align-self: flex-end;
+}
+.button:hover {
+    background-color: orange;
+}

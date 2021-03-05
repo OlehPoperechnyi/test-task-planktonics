@@ -1,0 +1,15 @@
+.wrapper {
+    background-color: orange;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper_logo {
+    padding-left: 40px;
+}
+.wrapper_authInfo {
+    padding-right: 40px;
+}
+
