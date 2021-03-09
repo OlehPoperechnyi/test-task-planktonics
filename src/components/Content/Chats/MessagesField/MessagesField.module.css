@@ -1,6 +1,6 @@
 .messagesField {
     display: grid;
-    grid-template-rows: 1fr 80px;
+    grid-template-rows: 5fr 1fr;
     height: 100%;
     background-color: dodgerblue;
 }
