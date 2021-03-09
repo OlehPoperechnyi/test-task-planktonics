@@ -1,7 +1,8 @@
+//renders a message field with a new message input field
+
 import style from './MessagesField.module.css';
 import NewMessageContainer from './NewMessage/NewMessageContainer';
 import MessagesContainer from "./Messages/MessagesContainer";
-
 
 const MessagesField = () => {
     return (

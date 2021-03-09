@@ -1,3 +1,4 @@
+//responsible for rendering the chat (group) and visualizing the process
 import style from "./ChatItem.module.css";
 import {NavLink} from "react-router-dom";
 

@@ -1,3 +1,5 @@
+//renders a block of information about an authorized user
+
 import style from "./AuthInfo.module.css";
 import {NavLink} from "react-router-dom";
 import Button from "../../Button/Button";

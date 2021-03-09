@@ -1,3 +1,5 @@
+//renders an input field for redux-form with an error notification
+
 import React from "react";
 import style from "./FormsControls.module.css";
 

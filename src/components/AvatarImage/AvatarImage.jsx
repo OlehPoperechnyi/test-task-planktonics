@@ -1,3 +1,5 @@
+//responsible for rendering the avatar
+
 import style from "./AvatarImage.module.css";
 
 const AvatarImage = ({link}) => {

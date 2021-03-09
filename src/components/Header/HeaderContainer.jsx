@@ -1,3 +1,5 @@
+//provides access to the state using a "connect"
+
 import Header from "./Header";
 import {connect} from "react-redux";
 import {setUserData} from "../../redux/auth-reducer";

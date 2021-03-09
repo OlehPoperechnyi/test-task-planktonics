@@ -1,3 +1,5 @@
+//provides access to the state using a "connect", gets a list of chats (groups)
+
 import {connect} from "react-redux";
 import {changeChat} from "../../../../redux/messages-reducer";
 

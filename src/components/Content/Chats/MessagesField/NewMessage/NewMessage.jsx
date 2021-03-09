@@ -1,3 +1,5 @@
+//renders an input field with error visualization and edit mode
+
 import style from './NewMessage.module.css';
 import Button from "../../../../Button/Button";
 

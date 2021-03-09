@@ -1,3 +1,5 @@
+//renders array of messages
+
 import style from "./Messages.module.css";
 import React, {useEffect} from "react";
 

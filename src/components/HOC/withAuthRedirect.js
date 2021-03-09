@@ -1,3 +1,5 @@
+//responsible for redirect in the absence of authorization
+
 import {Redirect} from "react-router";
 import React from "react";
 import {connect} from "react-redux";

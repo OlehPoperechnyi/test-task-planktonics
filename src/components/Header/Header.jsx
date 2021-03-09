@@ -1,3 +1,5 @@
+//renders company name and authorization block with user data
+
 import style from './Header.module.css';
 import AuthInfo from "./AuthInfo/AuthInfo";
 

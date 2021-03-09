@@ -1,3 +1,5 @@
+//provides access to the state using a "connect"
+
 import {connect} from "react-redux";
 import MyMessage from "./MyMessage";
 import {editMessage, setActiveMessage, setMessageEditMode} from "../../../../../../redux/messages-reducer";

@@ -1,3 +1,6 @@
+//provides access to the state using a "connect", selects the desired messages of a specific chat,
+// determines the messages of an authorized user,
+
 import {connect} from "react-redux";
 import Messages from "./Messages";
 import MyMessageContainer from "./MyMessage/MyMessageContainer";

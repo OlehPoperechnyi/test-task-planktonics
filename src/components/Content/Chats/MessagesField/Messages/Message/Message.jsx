@@ -1,3 +1,5 @@
+//renders message and data of other users
+
 import style from "./Message.module.css";
 import AvatarImage from "../../../../../AvatarImage/AvatarImage";
 

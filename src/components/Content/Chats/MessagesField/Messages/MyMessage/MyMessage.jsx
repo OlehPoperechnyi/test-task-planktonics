@@ -1,5 +1,6 @@
-import style from "./MyMessage.module.css";
+//renders message of an authorized user with buttons for the ability to delete and edit sent messages
 
+import style from "./MyMessage.module.css";
 
 const MyMessage = ({message, messageId, editMessage, editMessageId, setMessageEditMode, setActiveMessage}) => {
 
