@@ -1,6 +1,9 @@
-.wrapper {
-    max-height: 60vh;
+.messagesWrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 72vh;
     overflow-x: hidden;
     overflow-y: auto;
+    text-align: left;
 }
 

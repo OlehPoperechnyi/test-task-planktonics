@@ -1,23 +1,19 @@
 import style from './MessagesField.module.css';
 import NewMessageContainer from './NewMessage/NewMessageContainer';
-import {compose} from "redux";
-import {connect} from "react-redux";
 import MessagesContainer from "./Messages/MessagesContainer";
 
 
-const MessagesField = (props) => {
+const MessagesField = () => {
     return (
-        <div className={style.wrapper}>
-            <div className={style.wrapper_messages}>
+        <div className={style.messagesField}>
+            <div className={style.messagesField__messages}>
                 <MessagesContainer />
             </div>
-            <div className={style.wrapper_newMessage}>
+            <div className={style.messagesField__newMessage}>
                 <NewMessageContainer />
             </div>
         </div>
     );
 }
 
-export default compose(
-    connect((state) => { return {messages: state.messages}  }, {}),
-)(MessagesField);
+export default MessagesField;

@@ -1,17 +1,23 @@
 import style from "./AuthInfo.module.css";
 import {NavLink} from "react-router-dom";
 import Button from "../../Button/Button";
+import AvatarImage from "../../AvatarImage/AvatarImage";
 
-const AuthInfoBar = ({isAuth, id, login, logout}) => {
-    return <div className={style.login}>
-        {(isAuth)
-            ? (<div>
-                <NavLink to={`/info/user/` + id}>{login}</NavLink>
-                <NavLink to="/login" onClick={() => logout()}><Button text={"Logout"}/></NavLink>
+
+const AuthInfoBar = ({isAuth, login, setUserData}) => {
+    return isAuth
+            ? (<div className={style.authInfoBar}>
+                <div className={style.authUser}>
+                    <AvatarImage link="" /> {login}
+                </div>
+                <NavLink to="" onClick={() => setUserData(null, null, null, false, false)}>
+                    <Button text={"Logout"}/>
+                </NavLink>
             </div>)
-            : <NavLink to="/login"><Button text={"Login"}/></NavLink>
-        }
-    </div>
+
+            : <NavLink to="">
+                <Button text={"Login"}/>
+            </NavLink>
 }
 
 export default AuthInfoBar;

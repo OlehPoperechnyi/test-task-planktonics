@@ -1,25 +1,17 @@
-.dialog {
+.chatItem {
     min-width: 200px;
     min-height: 40px;
-
 }
-
-.dialog:hover {
+.chatItem:hover {
     background-color: dodgerblue;
 }
-
-.dialog_link {
+.chatItem__link {
     display:block;
     color: blue;
     text-decoration: none;
     padding: 10px;
-
 }
-
-.dialog_link.active {
+.chatItem__link.active {
     color: white;
-}
-
-.dialog_link.active {
     background-color: dodgerblue;
 }

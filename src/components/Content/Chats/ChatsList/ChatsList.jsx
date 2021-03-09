@@ -1,13 +1,8 @@
-import ChatItem from "./ChatItem/ChatItem";
 import style from "./ChatsList.module.css";
 
-
-
-const ChatsList = (props) => {
-    let chatsMap = props.chats.map(d => <ChatItem changeChat={props.changeChat}
-                                                  name={d.name} id={d.id} key={d.id}/>);
+const ChatsList = ({chatsMap}) => {
         return (
-            <div className={style.chats}>
+            <div className={style.chatsList}>
                 {chatsMap}
             </div>
     );

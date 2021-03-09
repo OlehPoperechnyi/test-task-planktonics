@@ -8,28 +8,23 @@ const maxLength30 = maxLengthCreator(30);
 
 const LoginForm = ({handleSubmit, error}) => {
     return (<form onSubmit={handleSubmit}>
-            <div className={style.wrapper_error}>
+            <div className={style._error}>
             {error && error}
             </div>
-            <div className={style.wrapper_login}>
-                <Field placeholder={"Login"}
+                <Field placeholder={"Login or email"}
                        name={"email"}
                        component={Input}
                        validate={[required, maxLength30]}
                 />
-            </div>
-            <div className={style.wrapper_password}>
                 <Field placeholder={"Password"}
                        type={"password"}
                        name={"password"}
                        component={Input}
                        validate={[required, maxLength30]}
                 />
-            </div>
-
             <div>
                 <Field type={"checkbox"} name={"rememberMe"} component={"input"}/> remember me
-                <div className={style.wrapper_button}>
+                <div className={style.loginButton}>
                     <Button text={"Login"}/>
                 </div>
             </div>
@@ -38,4 +33,4 @@ const LoginForm = ({handleSubmit, error}) => {
     );
 }
 
-export default reduxForm({form: 'login'})(LoginForm);;
+export default reduxForm({form: 'login'})(LoginForm);

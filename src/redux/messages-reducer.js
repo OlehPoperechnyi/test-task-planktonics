@@ -1,6 +1,9 @@
 const ADD_MESSAGE = 'ADD_MESSAGE';
 const EDIT_MESSAGE = 'EDIT_MESSAGE';
+const SET_MESSAGE_EDIT_MOD = 'SET_MESSAGE_EDIT_MOD';
 const CHANGE_CHAT = 'CHANGE_CHAT';
+const SET_ACTIVE_MESSAGE = 'SET_ACTIVE_MESSAGE';
+
 
 let initialState = {
     chatsList: {
@@ -29,6 +32,8 @@ let initialState = {
         {userId: 26, name: 'Daniil', avaUrl: '', mediaFiles: [{}]},
         {userId: 27, name: 'Sergey', avaUrl: '', mediaFiles: [{}]}
     ],
+    editMessageId: 0,
+    activeMessageField: '',
     messages: [
         {chatId: 1, userId: 21, message: 'Hi!', messageId: 1},
         {chatId: 1, userId: 21, message: 'How are you?', messageId: 2},
@@ -47,6 +52,10 @@ let initialState = {
     ]
 };
 
+if (localStorage.getItem('messagesState') !== null) {
+    initialState = { ...JSON.parse(localStorage.getItem('messagesState'))}
+}
+
 export const changeChat = (chatId) => ({
     type: CHANGE_CHAT,
     chatId
@@ -62,6 +71,14 @@ export const editMessage = (message, messageId) => ({
     type: EDIT_MESSAGE,
     message,
     messageId
+});
+export const setMessageEditMode = (editMessageId) => ({
+    type: SET_MESSAGE_EDIT_MOD,
+    editMessageId
+});
+export const setActiveMessage = (message) => ({
+    type: SET_ACTIVE_MESSAGE,
+    message
 });
 
 
@@ -79,6 +96,7 @@ const messagesReducer = (state = initialState, action) => {
             return stateCopy;
         }
         case ADD_MESSAGE: {
+
             stateCopy.messages = [
                 ...state.messages,
                 {
@@ -87,6 +105,7 @@ const messagesReducer = (state = initialState, action) => {
                     message: action.message,
                     messageId: state.messages.length + 1
                 }];
+            localStorage.setItem('messagesState', JSON.stringify(stateCopy));
             return stateCopy;
         }
         case EDIT_MESSAGE: {
@@ -98,6 +117,23 @@ const messagesReducer = (state = initialState, action) => {
                     }
                 } else return e;
             });
+            localStorage.setItem('messagesState', JSON.stringify(stateCopy));
+            return stateCopy;
+        }
+        case SET_MESSAGE_EDIT_MOD: {
+            stateCopy = {
+                ...state,
+                editMessageId: action.editMessageId,
+            }
+            localStorage.setItem('messagesState', JSON.stringify(stateCopy));
+            return stateCopy;
+        }
+        case SET_ACTIVE_MESSAGE: {
+            stateCopy = {
+                ...state,
+                activeMessageField: action.message,
+            }
+            localStorage.setItem('messagesState', JSON.stringify(stateCopy));
             return stateCopy;
         }
         default: {

@@ -3,12 +3,12 @@ import AuthInfo from "./AuthInfo/AuthInfo";
 
 const Header = ({isAuth, id, login, ...props}) => {
     return (
-        <div className={style.wrapper}>
-            <div className={style.wrapper_logo}>
+        <div className={style.header}>
+            <div className={style.header__logo}>
                 Planktonics
             </div>
-            <div className={style.wrapper_authInfo}>
-                <AuthInfo isAuth={isAuth} id={id} login={login} logout={props.logout}/>
+            <div className={style.header__authInfo}>
+                <AuthInfo isAuth={isAuth} login={login} setUserData={props.setUserData}/>
             </div>
         </div>
     );

@@ -1,60 +1,39 @@
-import React, { useState, useEffect } from "react";
 import style from "./MyMessage.module.css";
-import Button from "../../../../../Button/Button";
 
 
-const MyMessage = ({message, messageId, editMessage}) => {
+const MyMessage = ({message, messageId, editMessage, editMessageId, setMessageEditMode, setActiveMessage}) => {
 
-        let [editMode, setEditMode]  = useState(false);
-        let [localMessage, setMessage]  = useState(message);
+    const deleteMessage = () => {
+        editMessage('', messageId);
+    }
 
-        const deleteMessage = () => {
-            editMessage('', messageId);
-        }
-        const activateEditMode = () => {
-            setEditMode(true);}
-        const deactivateEditMode = () => {
-            setEditMode(false);
-            editMessage(localMessage, messageId);
-        }
-        const onMessageChange = (e) => {
-            setMessage(e.currentTarget.value);
-        }
-        useEffect(() => {
-            setMessage(message);
-        }, [message]);
-
+    const activateEditMode = () => {
+        setMessageEditMode(messageId);
+        setActiveMessage(message);//pass the message text to the active message field for editing
+    }
     return (
-        <div className={style.messageWrapper}>
+        <div className={style.myMessageWrapper}>
             {(message === '')
-                ? <div className={`${style.messageWrapper_messageDeleted} ${style.messageWrapper_message}`}>Сообщение удалено</div>
-                : <>
-                    { editMode
-                        ? <div>
-                            <div className={style.messageWrapper_message}>
-                                <input onBlur={deactivateEditMode}
-                                       onChange={onMessageChange}
-                                       autoFocus={true}
-                                       value={localMessage}/>
-                            </div>
-
-                        </div>
-                        : <>
-                            <div className={style.edit}>
-                                <span onClick={activateEditMode}>
-                                    <Button text={"edit"}/>
-                                </span>
-                                <span onClick={deleteMessage}>
-                                    <Button text={"delete"}/>
-                                </span>
-                            </div>
-                            <div className={style.messageWrapper_message}>{message}</div>
-                        </>
-                    }
-                </>
+                ? <div className={`${style.myMessageWrapper__message} ${style.myMessageWrapper__message_deleted}`}>
+                    Message deleted
+                </div>
+                : <div>
+                    <div className={`${style.myMessageWrapper__message}  ${(editMessageId === messageId) && style._editMode}`}>
+                        {message}
+                    </div>
+                    { //edit and delete buttons
+                        (editMessageId !== messageId) && <div className={style.myMessageWrapper__editWrapper}>
+                        <span className={style.myMessageWrapper__editWrapper_edit} onClick={activateEditMode}>
+                                edit
+                        </span>
+                        <span className={style.myMessageWrapper__editWrapper_delete} onClick={deleteMessage}>
+                                delete
+                        </span>
+                    </div>}
+                </div>
             }
         </div>
     );
-};
+}
 
 export default MyMessage;

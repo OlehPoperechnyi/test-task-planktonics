@@ -1,23 +1,37 @@
-.messageWrapper {
-    padding: 5px;
-    text-align: right;
-}
-.edit {
-    display: none;
-}
-.messageWrapper:hover .edit {
-    display: inline-block;
-}
+.myMessageWrapper {
+    align-self: flex-end;
 
-.messageWrapper_messageDeleted {
-    color: gray;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
-
-.messageWrapper_message {
-    display: inline-block;
-    min-width: 20px;
+.myMessageWrapper__message_deleted {
+    color: grey;
+}
+.myMessageWrapper__message {
+    min-width: 80px;
     min-height: 20px;
     padding: 10px;
     background-color: white;
     border-radius: 10px;
+    white-space: pre-wrap;
 }
+.myMessageWrapper:hover .myMessageWrapper__editWrapper {
+    display: flex;
+}
+.myMessageWrapper__editWrapper {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    color: grey;
+}
+.myMessageWrapper__editWrapper_edit:hover {
+    color: orange;
+}
+.myMessageWrapper__editWrapper_delete:hover {
+    color: red;
+}
+._editMode {
+    border: solid 3px orange;
+}
+
+

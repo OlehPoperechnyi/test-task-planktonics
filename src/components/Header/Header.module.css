@@ -1,4 +1,4 @@
-.wrapper {
+.header {
     background-color: orange;
     height: 100%;
     width: 100%;
@@ -6,10 +6,10 @@
     align-items: center;
     justify-content: space-between;
 }
-.wrapper_logo {
+.header__logo {
     padding-left: 40px;
 }
-.wrapper_authInfo {
+.header__authInfo {
     padding-right: 40px;
 }
 

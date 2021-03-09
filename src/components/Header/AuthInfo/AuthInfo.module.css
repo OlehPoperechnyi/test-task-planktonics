@@ -1,0 +1,15 @@
+.authInfoBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.authUser {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}

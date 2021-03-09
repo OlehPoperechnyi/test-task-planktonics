@@ -10,14 +10,11 @@ function App() {
         <BrowserRouter>
             <Provider store={store}>
                 <div className={style.AppWrapper}>
-                    <div className={style.AppWrapper_header}>
+                    <div className={style.AppWrapper__header}>
                         <HeaderContainer />
                     </div>
-                    <div className={style.AppWrapper_content}>
+                    <div className={style.AppWrapper__content}>
                         <Content/>
-                    </div>
-                    <div className={style.AppWrapper_nav}>
-
                     </div>
                 </div>
             </Provider>

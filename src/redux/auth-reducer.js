@@ -1,6 +1,3 @@
-import {authAPI} from "../api/API";
-import {stopSubmit} from "redux-form";
-
 const SET_USER_DATA = 'SET_USER_DATA';
 
 let initialState =
@@ -9,10 +6,15 @@ let initialState =
         email: null,
         login: null,
         isAuth: false,
-        isFetching: false
+        rememberMe: false
     };
+//check for locally saved data
+if (localStorage.getItem('authState') !== null) {
+    initialState = { ...JSON.parse(localStorage.getItem('authState'))}
+}
+//implementation for server requests
 //Thunks
-export const getAuthUserData = () => async (dispatch) => {
+/*export const getAuthUserData = () => async (dispatch) => {
     let response = await authAPI.me();
     if (response.resultCode === 0) {
         dispatch(setUserData(response.data.id, response.data.email, response.data.login, true));
@@ -32,17 +34,18 @@ export const logout = () => async (dispatch) => {
     if (response.resultCode === 0) {
         dispatch(setUserData(null, null, null, false));
     }
-}
+}*/
 
 //Dispatches
-export const setUserData = (id, email = null, login = null, isAuth) => ({
+export const setUserData = (id, email = null, login = null, isAuth, rememberMe) => ({
     type: SET_USER_DATA,
-    payload: {id, email, login, isAuth}
+    payload: {id, email, login, isAuth, rememberMe}
 });
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_USER_DATA: {
+            localStorage.setItem('authState', JSON.stringify(action.payload));
             return {
                 ...state,
                 ...action.payload

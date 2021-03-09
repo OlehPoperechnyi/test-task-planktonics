@@ -1,14 +1,33 @@
 .messageWrapper {
-    padding: 5px;
-    text-align: left;
+    align-self: flex-start;
+
+    min-height: 60px;
+    display: grid;
+    grid-template-areas:
+            "img name"
+            "img message";
+
 }
-
-
-.messageWrapper_message {
-    display: inline-block;
+.messageWrapper__message {
+    grid-area: message;
     min-width: 20px;
-    min-height: 20px;
+    height: 20px;
     padding: 10px;
+    margin-left: 5px;
     background-color: white;
     border-radius: 10px;
 }
+.messageWrapper__message_deleted {
+    color: grey;
+}
+.messageWrapper__avatar {
+    grid-area: img;
+    align-self: center;
+}
+
+.messageWrapper__name {
+    padding-left: 10px;
+    grid-area: name;
+    justify-self: start;
+}
+

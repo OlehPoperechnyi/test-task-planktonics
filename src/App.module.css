@@ -9,11 +9,11 @@
   grid-template-columns: 1fr 1fr 1fr;
   background-color: dodgerblue;
 }
-.AppWrapper_header {
+.AppWrapper__header {
   grid-area: header;
 
 }
-.AppWrapper_content {
+.AppWrapper__content {
   grid-area: content;
 }
 

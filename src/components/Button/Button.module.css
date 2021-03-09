@@ -5,7 +5,6 @@
     width: 60px;
     border: none;
     outline: none;
-    align-self: flex-end;
 }
 .button:hover {
     background-color: orange;

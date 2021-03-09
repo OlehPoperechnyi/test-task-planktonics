@@ -1,14 +1,13 @@
 import style from "./ChatItem.module.css";
 import {NavLink} from "react-router-dom";
 
-const ChatItem = (props) => {
-    let path = "/chats/" + props.id;
+const ChatItem = ({id, name, changeChat}) => {
     return (
-        <div className={style.dialog}>
-            <NavLink to={path}
+        <div className={style.chatItem}>
+            <NavLink className={style.chatItem__link}
                      activeClassName={style.active}
-                     className={style.dialog_link}
-                     onClick={()=> props.changeChat(props.id) }>{props.name}</NavLink>
+                     to={"/chats/" + id}
+                     onClick={()=> changeChat(id) }>{name}</NavLink>
         </div>
     );
 };
