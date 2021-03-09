@@ -25,7 +25,7 @@ be able to send messages (and then edit or delete them).
 2. `cd test-task-planktonics`
 3. `npm install` or `yarn install`
 4. `npm run start` or `yarn start`
-5. Use `test@gamil.com` as a login and `qwer1234` as password.
+5. Use `test@gmail.com` as a login and `qwer1234` as password.
 
 ## List of used libraries
 - `react` 
