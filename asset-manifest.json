@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/test-task-planktonics/static/css/main.a62d8b63.chunk.css",
-    "main.js": "/test-task-planktonics/static/js/main.23a416fb.chunk.js",
-    "main.js.map": "/test-task-planktonics/static/js/main.23a416fb.chunk.js.map",
-    "runtime-main.js": "/test-task-planktonics/static/js/runtime-main.01764041.js",
-    "runtime-main.js.map": "/test-task-planktonics/static/js/runtime-main.01764041.js.map",
-    "static/js/2.eef21de4.chunk.js": "/test-task-planktonics/static/js/2.eef21de4.chunk.js",
-    "static/js/2.eef21de4.chunk.js.map": "/test-task-planktonics/static/js/2.eef21de4.chunk.js.map",
-    "static/js/3.10a41cb1.chunk.js": "/test-task-planktonics/static/js/3.10a41cb1.chunk.js",
-    "static/js/3.10a41cb1.chunk.js.map": "/test-task-planktonics/static/js/3.10a41cb1.chunk.js.map",
+    "main.css": "/test-task-planktonics/static/css/main.15c1644c.chunk.css",
+    "main.js": "/test-task-planktonics/static/js/main.902c504e.chunk.js",
+    "main.js.map": "/test-task-planktonics/static/js/main.902c504e.chunk.js.map",
+    "runtime-main.js": "/test-task-planktonics/static/js/runtime-main.aa49caf5.js",
+    "runtime-main.js.map": "/test-task-planktonics/static/js/runtime-main.aa49caf5.js.map",
+    "static/js/2.5fbd65aa.chunk.js": "/test-task-planktonics/static/js/2.5fbd65aa.chunk.js",
+    "static/js/2.5fbd65aa.chunk.js.map": "/test-task-planktonics/static/js/2.5fbd65aa.chunk.js.map",
+    "static/js/3.e221fe15.chunk.js": "/test-task-planktonics/static/js/3.e221fe15.chunk.js",
+    "static/js/3.e221fe15.chunk.js.map": "/test-task-planktonics/static/js/3.e221fe15.chunk.js.map",
     "index.html": "/test-task-planktonics/index.html",
-    "static/css/main.a62d8b63.chunk.css.map": "/test-task-planktonics/static/css/main.a62d8b63.chunk.css.map",
-    "static/js/2.eef21de4.chunk.js.LICENSE.txt": "/test-task-planktonics/static/js/2.eef21de4.chunk.js.LICENSE.txt"
+    "static/css/main.15c1644c.chunk.css.map": "/test-task-planktonics/static/css/main.15c1644c.chunk.css.map",
+    "static/js/2.5fbd65aa.chunk.js.LICENSE.txt": "/test-task-planktonics/static/js/2.5fbd65aa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.01764041.js",
-    "static/js/2.eef21de4.chunk.js",
-    "static/css/main.a62d8b63.chunk.css",
-    "static/js/main.23a416fb.chunk.js"
+    "static/js/runtime-main.aa49caf5.js",
+    "static/js/2.5fbd65aa.chunk.js",
+    "static/css/main.15c1644c.chunk.css",
+    "static/js/main.902c504e.chunk.js"
   ]
 }
