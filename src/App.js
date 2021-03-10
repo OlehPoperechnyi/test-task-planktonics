@@ -1,13 +1,13 @@
 import style from './App.module.css';
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Content from "./components/Content/Content";
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./redux/redux-store";
 
-function App() {
+function App() { //use HashRouter only for github-pages, usually use BrowserRouter
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Provider store={store}>
                 <div className={style.AppWrapper}>
                     <div className={style.AppWrapper__header}>
@@ -18,7 +18,7 @@ function App() {
                     </div>
                 </div>
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
 
     );
 }
